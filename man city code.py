@@ -15,6 +15,7 @@ Created on Sun Feb 16 22:10:14 2025
 
 # 匯入需要的套件
 import pandas
+import time
 sfilename = 'man city player.xlsx'
 sheetname = "name to web"
 import xlwings as xw
@@ -33,6 +34,7 @@ for i in range(1,13):
     # sheet_name_carrer=sheet.cells(num,1).value  ' career'
     print(sheet_name)
     dfs = pandas.read_html(sheet.cells(num,2).value)
+    time.sleep(3)
     print(int(fnum5game))
     df5game = dfs[fnum5game].iloc[:,0:41]
     # print(int(fnumcarran))
